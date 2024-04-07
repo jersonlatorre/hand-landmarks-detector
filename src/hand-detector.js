@@ -51,7 +51,7 @@ let namesMap = [
   'pinky4',
 ]
 
-class HandDetector {
+class HandTracker {
   constructor({ url = null, flip = true } = {}) {
     this.isVideoLoaded = false
     this.isDetectorLoaded = false
@@ -172,7 +172,7 @@ window.drawVideo = (x = 0, y = 0, w = width, h = height) => {
   pop()
 }
 
-window.drawKeypoints = ({ size = 8, color = 'white' } = {}) => {
+window.drawLandmarks = ({ size = 8, color = 'white' } = {}) => {
   if (!landmarks) return
   push()
   fill(color)
@@ -232,11 +232,6 @@ window.drawImageBetween = (img, p1, p2) => {
   pop()
 }
 
-window.createHandDetector = ({ url = null, flip = null } = {}) => {
-  flip = flip !== null ? flip : url ? false : true
-  return new HandDetector({ url, flip })
-}
-
 window.distanceBetween = (p1, p2) => {
   if (!p1 || !p2) return 0
   return Math.sqrt(Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2))
@@ -246,4 +241,9 @@ window.directionBetween = (p1, p2) => {
   if (!p1 || !p2) return 0
   let angle = Math.atan2(p2.y - p1.y, p2.x - p1.x)
   return map(angle, -Math.PI / 2, Math.PI / 2, -1, 1)
+}
+
+window.createHandTracker = ({ url = null, flip = null } = {}) => {
+  flip = flip !== null ? flip : url ? false : true
+  return new HandTracker({ url, flip })
 }
