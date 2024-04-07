@@ -1,6 +1,6 @@
 {
-  "name": "hand-detector",
-  "version": "1.0.1",
+  "name": "hand-landmarks-tracker",
+  "version": "1.0.2",
   "source": "src/hand-detector.js",
   "main": "dist/hand-detector.js",
   "license": "MIT",
