@@ -14,6 +14,7 @@ A library compatible with p5.js for hand pose detection.
 
 ## Methods
 
+- `createHandTracker()`: Creates a new hand tracker.
 - `drawLandmarks()`: Visualizes the detected hand landmarks on the canvas.
 - `drawVideo(x = 0, y = 0, w = width, h = height)`: Draws the video feed on the canvas. Can be customized with position and size.
 - `distanceBetween(p1, p2)`: Returns the Euclidean distance between landmarks `p1` and `p2`.
