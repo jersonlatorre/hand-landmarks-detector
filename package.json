@@ -1,11 +1,11 @@
 {
   "name": "hand-landmarks-tracker",
-  "version": "1.0.3",
-  "source": "src/hand-detector.js",
-  "main": "dist/hand-detector.js",
+  "version": "1.0.4",
+  "source": "src/hand-tracker.js",
+  "main": "dist/hand-tracker.js",
   "license": "MIT",
   "scripts": {
-    "build": "parcel build ./src/hand-detector.js --dist-dir ./dist",
+    "build": "parcel build ./src/hand-tracker.js --dist-dir ./dist",
     "publish": "bash scripts/publish.sh",
     "export": "bash scripts/export.sh"
   },
